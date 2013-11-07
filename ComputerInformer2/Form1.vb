@@ -40,6 +40,8 @@ Public Class frmComputerInformer
         Dim memory As String
         memory = My.Computer.Info.AvailablePhysicalMemory
         lblmemoryAvail.Text = memory.ToString / 1073741824
+
+
     End Sub
 
     Private Sub SupportToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles SupportToolStripMenuItem.Click
@@ -55,6 +57,21 @@ Public Class frmComputerInformer
     End Sub
 
     Private Sub Label2_Click(sender As Object, e As EventArgs) Handles Label2.Click
+
+    End Sub
+
+    Private Sub NetworkCon_Tick(sender As Object, e As EventArgs) Handles NetworkCon.Tick
+        'Checks connectivity to the router and Internet
+        If My.Computer.Network.Ping("google.com") Then
+
+
+            '  MsgBox("Server pinged successfuly")
+            Label6.Text = "yes"
+            Label6.BackColor.Equals("green")
+        Else
+            '  MsgBox("Ping request timed out")
+            Label6.Text = "no"
+        End If
 
     End Sub
 End Class

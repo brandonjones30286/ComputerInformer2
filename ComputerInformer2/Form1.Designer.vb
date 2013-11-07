@@ -48,10 +48,15 @@ Partial Class frmComputerInformer
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
+        Me.grpNetworkCon = New System.Windows.Forms.GroupBox()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.NetworkCon = New System.Windows.Forms.Timer(Me.components)
         Me.MenuStrip1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.grpKeyboard.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
+        Me.grpNetworkCon.SuspendLayout()
         Me.SuspendLayout()
         '
         'MenuStrip1
@@ -287,11 +292,47 @@ Partial Class frmComputerInformer
         '
         Me.Timer1.Enabled = True
         '
+        'grpNetworkCon
+        '
+        Me.grpNetworkCon.Controls.Add(Me.Label6)
+        Me.grpNetworkCon.Controls.Add(Me.Label5)
+        Me.grpNetworkCon.Font = New System.Drawing.Font("Arial", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.grpNetworkCon.Location = New System.Drawing.Point(322, 183)
+        Me.grpNetworkCon.Name = "grpNetworkCon"
+        Me.grpNetworkCon.Size = New System.Drawing.Size(229, 144)
+        Me.grpNetworkCon.TabIndex = 7
+        Me.grpNetworkCon.TabStop = False
+        Me.grpNetworkCon.Text = "Internet Connectivity"
+        '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Font = New System.Drawing.Font("Arial", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label5.Location = New System.Drawing.Point(10, 92)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(124, 15)
+        Me.Label5.TabIndex = 0
+        Me.Label5.Text = "Connected to Internet"
+        '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(147, 89)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(56, 18)
+        Me.Label6.TabIndex = 1
+        Me.Label6.Text = "Label6"
+        '
+        'NetworkCon
+        '
+        Me.NetworkCon.Enabled = True
+        '
         'frmComputerInformer
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(662, 359)
+        Me.Controls.Add(Me.grpNetworkCon)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.grpKeyboard)
         Me.Controls.Add(Me.GroupBox2)
@@ -309,6 +350,8 @@ Partial Class frmComputerInformer
         Me.grpKeyboard.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
+        Me.grpNetworkCon.ResumeLayout(False)
+        Me.grpNetworkCon.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -337,5 +380,9 @@ Partial Class frmComputerInformer
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Timer1 As System.Windows.Forms.Timer
+    Friend WithEvents grpNetworkCon As System.Windows.Forms.GroupBox
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents NetworkCon As System.Windows.Forms.Timer
 
 End Class
